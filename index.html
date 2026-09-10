@@ -1,3 +1,40 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>মধুমতি কৃষি সমবায় সমিতি লি:</title>
+    <style>
+        /* মূল স্টাইলিং ও ডিজাইন */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* হেডার ও নেভিগেশন */
+        header {
+            background-color: #1b5e20;
+            color: white;
+            padding: 1.5rem 1rem;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0.3rem;
+        }
+
+        header p {
             font-size: 1rem;
             color: #c8e6c9;
         }
@@ -8,19 +45,36 @@
             justify-content: center;
             padding: 0.5rem;
             flex-wrap: wrap;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
-        nav a {
+        nav a, nav button {
             color: white;
             text-decoration: none;
             padding: 0.5rem 1rem;
             margin: 0.2rem;
             border-radius: 4px;
             transition: background 0.3s;
+            border: none;
+            background: transparent;
+            font-size: 1rem;
+            cursor: pointer;
         }
 
-        nav a:hover {
+        nav a:hover, nav button:hover {
             background-color: #1b5e20;
+        }
+
+        .btn-login-nav {
+            background-color: #fbc02d !important;
+            color: #1b5e20 !important;
+            font-weight: bold;
+        }
+
+        .btn-login-nav:hover {
+            background-color: #f9a825 !important;
         }
 
         /* মূল কনটেন্ট কন্টেইনার */
@@ -58,6 +112,77 @@
             margin-bottom: 0.5rem;
         }
 
+        /* ফরম স্টাইলিং */
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.3rem;
+            font-weight: bold;
+            color: #2e7d32;
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 0.7rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: #2e7d32;
+            box-shadow: 0 0 5px rgba(46, 125, 50, 0.3);
+        }
+
+        .btn-submit {
+            background-color: #2e7d32;
+            color: white;
+            border: none;
+            padding: 0.7rem 1.5rem;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn-submit:hover {
+            background-color: #1b5e20;
+        }
+
+        /* টেবিল স্টাইলিং */
+        .table-responsive {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+        }
+
+        th {
+            background-color: #2e7d32;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
         /* যোগাযোগ সেকশন */
         .contact-info p {
             margin-bottom: 0.8rem;
@@ -80,3 +205,283 @@
         }
 
         .btn-call:hover {
+            background-color: #1b5e20;
+        }
+
+        /* লগইন মোডাল (পপ-আপ) */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 400px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            position: relative;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #888;
+        }
+
+        .close-btn:hover {
+            color: #000;
+        }
+
+        /* ফুটার */
+        footer {
+            background-color: #1b5e20;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- হেডার সেকশন -->
+    <header>
+        <h1>মধুমতি কৃষি সমবায় সমিতি লি:</h1>
+        <p>কৃষি ও কৃষকের উন্নয়নে আমরা প্রতিশ্রুতিবদ্ধ</p>
+    </header>
+
+    <!-- নেভিগেশন বার -->
+    <nav>
+        <a href="#about">আমাদের কথা</a>
+        <a href="#services">সেবাসমূহ</a>
+        <a href="#member-apply">সদস্য আবেদন</a>
+        <a href="#loan-apply">ঋণ আবেদন</a>
+        <a href="#members-list">সদস্য তালিকা</a>
+        <a href="#savings-details">সঞ্চয় ও কিস্তি</a>
+        <a href="#notice">নোটিশ</a>
+        <a href="#contact">যোগাযোগ</a>
+        <button class="btn-login-nav" onclick="openLoginModal()">লগইন</button>
+    </nav>
+
+    <!-- মূল কনটেন্ট -->
+    <div class="container">
+
+        <!-- আমাদের কথা -->
+        <section id="about" class="card">
+            <h2>আমাদের পরিচিতি</h2>
+            <p>মধুমতি কৃষি সমবায় সমিতি লি: নেত্রকোনা জেলার স্থানীয় কৃষকদের আর্থিক ও সামাজিক মানোন্নয়নে কাজ করে যাচ্ছে। সমবায় ব্যবস্থার মাধ্যমে কৃষি উৎপাদন বৃদ্ধি, কৃষকদের ন্যায্যমূল্য নিশ্চিতকরণ এবং স্বাবলম্বী করে তোলাই আমাদের মূল লক্ষ্য।</p>
+        </section>
+
+        <!-- সেবাসমূহ -->
+        <section id="services" class="card">
+            <h2>আমাদের সেবাসমূহ</h2>
+            <ul>
+                <li>কৃষি প্রজেক্টে মূলধন ও সহজ শর্তে সঞ্চয়/ঋণ সুবিধা।</li>
+                <li>উন্নত মানের বীজ, সার ও কৃষি উপকরণ সরবরাহ সংক্রান্ত পরামর্শ।</li>
+                <li>সদস্যদের কল্যাণমূলক কার্যক্রম ও সামাজিক উন্নয়ন।</li>
+                <li>যৌথ কৃষি খামার ও সমবায়ভিত্তিক উৎপাদন পরিকল্পনা।</li>
+            </ul>
+        </section>
+
+        <!-- সদস্য ভর্তি আবেদন ফরম -->
+        <section id="member-apply" class="card">
+            <h2>📝 নতুন সদস্য ভর্তি আবেদন ফরম</h2>
+            <form onsubmit="alert('আপনার সদস্য আবেদনের তথ্য সফলভাবে জমা নেওয়া হয়েছে!'); return false;">
+                <div class="form-group">
+                    <label>আবেদনকারীর নাম:</label>
+                    <input type="text" placeholder="আপনার পূর্ণ নাম লিখুন" required>
+                </div>
+                <div class="form-group">
+                    <label>পিতা/স্বামীর নাম:</label>
+                    <input type="text" placeholder="পিতা বা স্বামীর নাম লিখুন" required>
+                </div>
+                <div class="form-group">
+                    <label>মোবাইল নম্বর:</label>
+                    <input type="tel" placeholder="017XXXXXXXX" required>
+                </div>
+                <div class="form-group">
+                    <label>জাতীয় পরিচয়পত্র (NID) নম্বর:</label>
+                    <input type="number" placeholder="NID নম্বর দিন" required>
+                </div>
+                <div class="form-group">
+                    <label>ঠিকানা:</label>
+                    <textarea rows="3" placeholder="গ্রাম, ডাকঘর, উপজেলা, জেলা" required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">আবেদন জমা দিন</button>
+            </form>
+        </section>
+
+        <!-- ঋণের আবেদন ফরম -->
+        <section id="loan-apply" class="card">
+            <h2>💰 কৃষি ঋণের আবেদন ফরম</h2>
+            <form onsubmit="alert('আপনার ঋণের আবেদন জমা নেওয়া হয়েছে! শীঘ্রই যোগাযোগ করা হবে।'); return false;">
+                <div class="form-group">
+                    <label>সদস্য আইডি / নাম:</label>
+                    <input type="text" placeholder="সদস্য আইডি বা নাম লিখুন" required>
+                </div>
+                <div class="form-group">
+                    <label>ঋণের পরিমাণ (টাকা):</label>
+                    <input type="number" placeholder="কত টাকা ঋণ চান?" required>
+                </div>
+                <div class="form-group">
+                    <label>ঋণ গ্রহণের উদ্দেশ্য:</label>
+                    <select required>
+                        <option value="">উদ্দেশ্য নির্বাচন করুন</option>
+                        <option value="crop">ফসল চাষাবাদ</option>
+                        <option value="equipment">কৃষি যন্ত্রপাতি ক্রয়</option>
+                        <option value="poultry">গবাদি পশু/পোল্ট্রি খামার</option>
+                        <option value="other">অন্যান্য</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>মোবাইল নম্বর:</label>
+                    <input type="tel" placeholder="018XXXXXXXX" required>
+                </div>
+                <button type="submit" class="btn-submit">ঋণের আবেদন জমা দিন</button>
+            </form>
+        </section>
+
+        <!-- সদস্য তালিকা -->
+        <section id="members-list" class="card">
+            <h2>📋 সম্মানিত সদস্য তালিকা</h2>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>আইডি</th>
+                            <th>নাম</th>
+                            <th>গ্রাম/এলাকা</th>
+                            <th>সদস্যপদ গ্রহণের তারিখ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>M-001</td>
+                            <td>মো: আব্দুর রহিম</td>
+                            <td>হাটখলা</td>
+                            <td>১০ জানুয়ারি, ২০২৪</td>
+                        </tr>
+                        <tr>
+                            <td>M-002</td>
+                            <td>আব্দুল করিম</td>
+                            <td>নেত্রকোনা সদর</td>
+                            <td>১৫ ফেব্রুয়ারি, ২০২৪</td>
+                        </tr>
+                        <tr>
+                            <td>M-003</td>
+                            <td>মোসা: সুফিয়া বেগম</td>
+                            <td>হাটখলা</td>
+                            <td>০১ মার্চ, ২০২৪</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- সঞ্চয় ও কিস্তি তথ্যের বিবরণী -->
+        <section id="savings-details" class="card">
+            <h2>📊 সঞ্চয় ও কিস্তির হিসাব সংক্রান্ত তথ্য</h2>
+            <p style="margin-bottom: 10px;">ব্যক্তিগত সঞ্চয় ও কিস্তির বিস্তারিত জানতে <b>সদস্য আইডি দিয়ে লগইন</b> করুন অথবা সমিতির অফিসে যোগাযোগ করুন।</p>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>সদস্য আইডি</th>
+                            <th>মোট সঞ্চয়</th>
+                            <th>চলতি ঋণ</th>
+                            <th>সর্বশেষ কিস্তির তারিখ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>M-001</td>
+                            <td>৳ ১২,০০০</td>
+                            <td>৳ ৫০,০০০</td>
+                            <td>০৫ সেপ্টেম্বর, ২০২৬</td>
+                        </tr>
+                        <tr>
+                            <td>M-002</td>
+                            <td>৳ ২৫,০০০</td>
+                            <td>৳ ০ (কোনো ঋণ নেই)</td>
+                            <td>১০ সেপ্টেম্বর, ২০২৬</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- নোটিশ/সংবাদ -->
+        <section id="notice" class="card">
+            <h2>সর্বশেষ নোটিশ</h2>
+            <p>📢 সমিতির নিয়মিত মাসিক সাধারণ সভা আগামী মাসে অনুষ্ঠিত হবে। সকল সদস্যকে যথাসময়ে উপস্থিত থাকার জন্য অনুরোধ করা হচ্ছে।</p>
+        </section>
+
+        <!-- যোগাযোগ -->
+        <section id="contact" class="card contact-info">
+            <h2>যোগাযোগ করুন</h2>
+            <p><strong>📍 ঠিকানা:</strong> হাটখলা বাজার, নেত্রকোনা সদর, নেত্রকোনা</p>
+            <p><strong>📞 মোবাইল:</strong> 01811699188</p>
+            <a href="tel:01811699188" class="btn-call">📞 সরাসরি কল করুন</a>
+        </section>
+
+    </div>
+
+    <!-- সদস্য লগইন মোডাল (Popup) -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeLoginModal()">&times;</span>
+            <h2 style="color: #1b5e20; margin-bottom: 1rem; text-align: center;">সদস্য লগইন</h2>
+            <form onsubmit="alert('লগইন সফল হয়েছে!'); closeLoginModal(); return false;">
+                <div class="form-group">
+                    <label>সদস্য আইডি / মোবাইল নম্বর:</label>
+                    <input type="text" placeholder="আইডি বা মোবাইল নম্বর" required>
+                </div>
+                <div class="form-group">
+                    <label>পিন / পাসওয়ার্ড:</label>
+                    <input type="password" placeholder="******" required>
+                </div>
+                <button type="submit" class="btn-submit" style="width: 100%;">লগইন করুন</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ফুটার -->
+    <footer>
+        <p>&copy; ২০২৬ মধুমতি কৃষি সমবায় সমিতি লি:। সকল অধিকার সংরক্ষিত।</p>
+    </footer>
+
+    <!-- জাবাস্ক্রিপ্ট কোড (লগইন পপ-আপের জন্য) -->
+    <script>
+        function openLoginModal() {
+            document.getElementById('loginModal').style.display = 'flex';
+        }
+
+        function closeLoginModal() {
+            document.getElementById('loginModal').style.display = 'none';
+        }
+
+        // মোডালের বাইরে ক্লিক করলে বন্ধ হওয়ার ব্যবস্থা
+        window.onclick = function(event) {
+            var modal = document.getElementById('loginModal');
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
