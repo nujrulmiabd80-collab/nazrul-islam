@@ -6,7 +6,7 @@
   <title>মধুমতি কৃষি সমবায় সমিতি লি:</title>
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
       background-color: #f4f7f6;
@@ -22,8 +22,6 @@
       margin: 0 0 5px 0;
       font-size: 24px;
     }
-    
-    /* নেভিগেশন বার */
     .nav-bar {
       background-color: #2e7d32;
     }
@@ -57,14 +55,6 @@
     .nav-links a:hover {
       background-color: #1b5e20;
     }
-    .login-btn-link {
-      background-color: #fbc02d;
-      color: black !important;
-      font-weight: bold;
-      border-radius: 4px;
-      margin-left: 5px;
-    }
-
     @media (max-width: 768px) {
       .menu-toggle {
         display: block;
@@ -77,7 +67,6 @@
         display: flex;
       }
     }
-
     .container {
       max-width: 850px;
       margin: 20px auto;
@@ -92,8 +81,6 @@
       padding-bottom: 8px;
       margin-top: 0;
     }
-
-    /* টেবিল রেসপন্সিভ */
     .table-container {
       width: 100%;
       overflow-x: auto;
@@ -113,8 +100,6 @@
       background-color: #2e7d32;
       color: white;
     }
-
-    /* ফর্ম স্টাইল */
     label {
       font-weight: bold;
       display: block;
@@ -149,8 +134,6 @@
       border-radius: 5px;
       margin-bottom: 15px;
     }
-
-    /* প্রাইভেট কন্টেন্ট লুকানো */
     #private-accounts {
       display: none;
       background-color: #e8f5e9;
@@ -160,13 +143,11 @@
 </head>
 <body>
 
-  <!-- হেডার -->
   <header>
     <h1>মধুমতি কৃষি সমবায় সমিতি লি:</h1>
     <p>কৃষি ও কৃষকের উন্নয়নে আমরা প্রতিশ্রুতিবদ্ধ</p>
   </header>
 
-  <!-- নেভিগেশন বার -->
   <div class="nav-bar">
     <button class="menu-toggle" onclick="toggleMenu()">☰ মেনু অপশন</button>
     <nav id="nav-links" class="nav-links">
@@ -174,17 +155,15 @@
       <a href="#members">সদস্য তালিকা</a>
       <a href="#login">সদস্য লগইন</a>
       <a href="#bkash">বিকাশ পেমেন্ট</a>
-      <a href="#contact">যোগাযোগ</a>
     </nav>
   </div>
 
-  <!-- পরিচিতি -->
   <div class="container" id="about">
     <h2>আমাদের পরিচিতি</h2>
-    <p>মধুমতি কৃষি সমবায় সমিতি লি: নেত্রকোনা জেলার স্থানীয় কৃষকদের আর্থিক ও সামাজিক মানোন্নয়নে কাজ করে যাচ্ছে। সমবায় ব্যবস্থার মাধ্যমে কৃষি উৎপাদন বৃদ্ধি, কৃষকদের ন্যায্যমূল্য নিশ্চিতকরণ এবং স্বাবলম্বী করতে আমরা অঙ্গীকারবদ্ধ।</p>
+    <p>মধুমতি কৃষি সমবায় সমিতি লি: নেত্রকোনা জেলার স্থানীয় কৃষকদের আর্থিক ও সামাজিক মানোন্নয়নে কাজ করে যাচ্ছে।</p>
   </div>
 
-  <!-- সাধারণ সদস্য তালিকা (পাবলিক) -->
+  <!-- পাবলিক সদস্য তালিকা -->
   <div class="container" id="members">
     <h2>সম্মানিত সদস্য তালিকা</h2>
     <div class="table-container">
@@ -213,8 +192,8 @@
 
   <!-- লগইন সেকশন -->
   <div class="container" id="login">
-    <h2>সদস্য / গ্রাহক লগইন</h2>
-    <p style="color: #666; font-size: 14px;">সঞ্চয়, ডিপিএস এবং এফডিআর হিসাব দেখতে আপনার আইডি ও পাসওয়ার্ড দিন।</p>
+    <h2>সদস্য লগইন</h2>
+    <p style="color: #666; font-size: 14px;">সঞ্চয়, ডিপিএস এবং এফডিআর হিসাব দেখতে লগইন করুন।</p>
     <form onsubmit="handleLogin(event)">
       <label for="login-id">সদস্য আইডি:</label>
       <input type="text" id="login-id" placeholder="উদাহরণ: M-001" required>
@@ -226,9 +205,9 @@
     </form>
   </div>
 
-  <!-- প্রাইভেট একাউন্ট তথ্য (লগইন করার পর দেখাবে) -->
+  <!-- প্রাইভেট তথ্য (লগইন করার পর দেখাবে) -->
   <div class="container" id="private-accounts">
-    <h2>আপনার হিসাবের বিস্তারিত (প্রাইভেট)</h2>
+    <h2>আপনার হিসাবের বিস্তারিত</h2>
     
     <h3>১. সাধারণ সঞ্চয় হিসাব</h3>
     <div class="table-container">
@@ -237,13 +216,11 @@
           <th>আইডি</th>
           <th>মোট সঞ্চয়</th>
           <th>চলতি ঋণ</th>
-          <th>সর্বশেষ কিস্তি</th>
         </tr>
         <tr>
           <td>M-001</td>
           <td>৳ ১২,০০০</td>
           <td>৳ ৫০,০০০</td>
-          <td>০৫ সেপ্টেম্বর ২০২৬</td>
         </tr>
       </table>
     </div>
@@ -255,13 +232,11 @@
           <th>ডিপিএস নম্বর</th>
           <th>মাসিক কিস্তি</th>
           <th>মোট জমা</th>
-          <th>মেয়াদ শেষ</th>
         </tr>
         <tr>
           <td>DPS-101</td>
           <td>৳ ১,০০০</td>
           <td>৳ ২৪,০০০</td>
-          <td>ডিসেম্বর ২০২৮</td>
         </tr>
       </table>
     </div>
@@ -273,21 +248,19 @@
           <th>এফডিআর নম্বর</th>
           <th>মূল টাকা</th>
           <th>মুনাফার হার</th>
-          <th>মেয়াদপূর্তির তারিখ</th>
         </tr>
         <tr>
           <td>FDR-501</td>
           <td>৳ ১,০০,০০০</td>
           <td>৯.৫%</td>
-          <td>১০ জানুয়ারি ২০২৭</td>
         </tr>
       </table>
     </div>
   </div>
 
-  <!-- বিকাশ পেমেন্ট জমা দিন -->
+  <!-- বিকাশ পেমেন্ট -->
   <div class="container" id="bkash">
-    <h2>সঞ্চয় / ডিপিএস / কিস্তি জমা দিন (বিকাশ)</h2>
+    <h2>সঞ্চয় / কিস্তি জমা দিন (বিকাশ)</h2>
     <div class="bkash-box">
       <p style="margin:0;"><strong>বিকাশ পার্সোনাল নম্বর:</strong> 01811699188 (Send Money করুন)</p>
     </div>
@@ -310,33 +283,28 @@
       <label for="bkash-num">যে বিকাশ নম্বর থেকে পাঠিয়েছেন:</label>
       <input type="text" id="bkash-num" placeholder="017XXXXXXXX" required>
 
-      <label for="trxid">বিকাশ TrxID (ট্রানজেকশন আইডি):</label>
+      <label for="trxid">বিকাশ TrxID:</label>
       <input type="text" id="trxid" placeholder="উদাহরণ: 8N7A6D5E" required>
 
       <button type="submit" class="btn bkash-btn">পেমেন্ট তথ্য জমা দিন</button>
     </form>
   </div>
 
-  <!-- জাভাস্ক্রিপ্ট -->
   <script>
     function toggleMenu() {
       var nav = document.getElementById("nav-links");
       nav.classList.toggle("active");
     }
 
-    /* লগইন ডেমো স্ক্রিপ্ট */
     function handleLogin(event) {
       event.preventDefault();
       var id = document.getElementById("login-id").value;
       var pass = document.getElementById("login-pass").value;
 
-      // এখানে আপনি পরে আপনার আসল পাসওয়ার্ড যুক্ত করতে পারেন
       if(id !== "" && pass !== "") {
         alert("লগইন সফল হয়েছে!");
         document.getElementById("private-accounts").style.display = "block";
         window.location.href = "#private-accounts";
-      } else {
-        alert("সঠিক আইডি ও পাসওয়ার্ড দিন।");
       }
     }
   </script>
