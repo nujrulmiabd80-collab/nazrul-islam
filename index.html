@@ -3,311 +3,123 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>মধুমতি কৃষি সমবায় সমিতি লি:</title>
+  <title>বিকাশ ম্যানুয়াল পেমেন্ট</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f7f6;
-      color: #333;
-    }
-    header {
-      background-color: #1b5e20;
-      color: white;
-      text-align: center;
-      padding: 20px 10px;
-    }
-    header h1 {
-      margin: 0 0 5px 0;
-      font-size: 24px;
-    }
-    .nav-bar {
-      background-color: #2e7d32;
-    }
-    .menu-toggle {
-      display: none;
-      background: #fbc02d;
-      color: #000;
-      border: none;
-      padding: 12px 20px;
-      font-size: 16px;
-      font-weight: bold;
-      cursor: pointer;
-      width: 100%;
-      text-align: left;
-    }
-    .nav-links {
+      background-color: #f4f6f9;
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
-      list-style: none;
+      align-items: center;
+      min-height: 100vh;
       margin: 0;
-      padding: 5px 0;
     }
-    .nav-links a {
-      color: white;
-      text-decoration: none;
-      padding: 10px 15px;
-      display: block;
-      font-size: 14px;
-    }
-    .nav-links a:hover {
-      background-color: #1b5e20;
-    }
-    @media (max-width: 768px) {
-      .menu-toggle {
-        display: block;
-      }
-      .nav-links {
-        display: none;
-        flex-direction: column;
-      }
-      .nav-links.active {
-        display: flex;
-      }
-    }
-    .container {
-      max-width: 850px;
-      margin: 20px auto;
-      background: white;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    .container h2 {
-      color: #1b5e20;
-      border-bottom: 2px solid #2e7d32;
-      padding-bottom: 8px;
-      margin-top: 0;
-    }
-    .table-container {
+    .payment-card {
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      max-width: 400px;
       width: 100%;
-      overflow-x: auto;
-      margin-top: 15px;
     }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      min-width: 600px;
-    }
-    th, td {
-      border: 1px solid #ddd;
-      padding: 10px;
-      text-align: left;
-    }
-    th {
-      background-color: #2e7d32;
-      color: white;
-    }
-    label {
-      font-weight: bold;
-      display: block;
-      margin-top: 10px;
-    }
-    input, select {
-      width: 100%;
-      padding: 10px;
-      margin: 5px 0 15px 0;
-      box-sizing: border-box;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-    .btn {
-      background-color: #2e7d32;
-      color: white;
-      padding: 12px;
-      border: none;
-      width: 100%;
-      font-weight: bold;
-      font-size: 16px;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    .bkash-btn {
+    .bkash-header {
       background-color: #e2136e;
-    }
-    .bkash-box {
-      background-color: #fff0f5;
-      border: 1px solid #e2136e;
+      color: white;
       padding: 15px;
-      border-radius: 5px;
+      text-align: center;
+      border-radius: 8px;
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .instructions {
+      background-color: #fff0f5;
+      border-left: 4px solid #e2136e;
+      padding: 10px 12px;
+      font-size: 13px;
+      color: #333;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+    .form-group {
       margin-bottom: 15px;
     }
-    #private-accounts {
-      display: none;
-      background-color: #e8f5e9;
-      border: 1px solid #c8e6c9;
+    .form-group label {
+      display: block;
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: #444;
+    }
+    .form-group input, .form-group select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+      font-size: 14px;
+    }
+    .btn-submit {
+      width: 100%;
+      background-color: #e2136e;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .btn-submit:hover {
+      background-color: #c10d5d;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>মধুমতি কৃষি সমবায় সমিতি লি:</h1>
-    <p>কৃষি ও কৃষকের উন্নয়নে আমরা প্রতিশ্রুতিবদ্ধ</p>
-  </header>
-
-  <div class="nav-bar">
-    <button class="menu-toggle" onclick="toggleMenu()">☰ মেনু অপশন</button>
-    <nav id="nav-links" class="nav-links">
-      <a href="#about">আমাদের কথা</a>
-      <a href="#members">সদস্য তালিকা</a>
-      <a href="#login">সদস্য লগইন</a>
-      <a href="#bkash">বিকাশ পেমেন্ট</a>
-    </nav>
+<div class="payment-card">
+  <div class="bkash-header">
+    বিকাশ ম্যানুয়াল পেমেন্ট
   </div>
 
-  <div class="container" id="about">
-    <h2>আমাদের পরিচিতি</h2>
-    <p>মধুমতি কৃষি সমবায় সমিতি লি: নেত্রকোনা জেলার স্থানীয় কৃষকদের আর্থিক ও সামাজিক মানোন্নয়নে কাজ করে যাচ্ছে।</p>
+  <div class="instructions">
+    <b>নির্দেশনা:</b> আমাদের বিকাশ পার্সোনাল নম্বর <b>01700000000</b>-এ "Send Money" করুন। টাকা পাঠানোর পর নিচের ফর্মে বিবরণ দিয়ে জমা দিন।
   </div>
 
-  <!-- পাবলিক সদস্য তালিকা -->
-  <div class="container" id="members">
-    <h2>সম্মানিত সদস্য তালিকা</h2>
-    <div class="table-container">
-      <table>
-        <tr>
-          <th>আইডি</th>
-          <th>নাম</th>
-          <th>গ্রাম/এলাকা</th>
-          <th>সদস্যগ্রহণের তারিখ</th>
-        </tr>
-        <tr>
-          <td>M-001</td>
-          <td>মো: আবদুর রহিম</td>
-          <td>হাটখলা</td>
-          <td>১০ জানুয়ারি ২০২৪</td>
-        </tr>
-        <tr>
-          <td>M-002</td>
-          <td>আব্দুল করিম</td>
-          <td>নেত্রকোনা সদর</td>
-          <td>১৫ ফেব্রুয়ারি ২০২৪</td>
-        </tr>
-      </table>
-    </div>
-  </div>
-
-  <!-- লগইন সেকশন -->
-  <div class="container" id="login">
-    <h2>সদস্য লগইন</h2>
-    <p style="color: #666; font-size: 14px;">সঞ্চয়, ডিপিএস এবং এফডিআর হিসাব দেখতে লগইন করুন।</p>
-    <form onsubmit="handleLogin(event)">
-      <label for="login-id">সদস্য আইডি:</label>
-      <input type="text" id="login-id" placeholder="উদাহরণ: M-001" required>
-
-      <label for="login-pass">পাসওয়ার্ড:</label>
-      <input type="password" id="login-pass" placeholder="পাসওয়ার্ড দিন" required>
-
-      <button type="submit" class="btn">লগইন করুন</button>
-    </form>
-  </div>
-
-  <!-- প্রাইভেট তথ্য (লগইন করার পর দেখাবে) -->
-  <div class="container" id="private-accounts">
-    <h2>আপনার হিসাবের বিস্তারিত</h2>
-    
-    <h3>১. সাধারণ সঞ্চয় হিসাব</h3>
-    <div class="table-container">
-      <table>
-        <tr>
-          <th>আইডি</th>
-          <th>মোট সঞ্চয়</th>
-          <th>চলতি ঋণ</th>
-        </tr>
-        <tr>
-          <td>M-001</td>
-          <td>৳ ১২,০০০</td>
-          <td>৳ ৫০,০০০</td>
-        </tr>
-      </table>
+  <form action="#" method="POST">
+    <div class="form-group">
+      <label for="member_id">সদস্য আইডি (Member ID)</label>
+      <input type="text" id="member_id" name="member_id" placeholder="যেমন: M-1024" required>
     </div>
 
-    <h3>২. ডিপিএস (DPS) হিসাব</h3>
-    <div class="table-container">
-      <table>
-        <tr>
-          <th>ডিপিএস নম্বর</th>
-          <th>মাসিক কিস্তি</th>
-          <th>মোট জমা</th>
-        </tr>
-        <tr>
-          <td>DPS-101</td>
-          <td>৳ ১,০০০</td>
-          <td>৳ ২৪,০০০</td>
-        </tr>
-      </table>
-    </div>
-
-    <h3>৩. এফডিআর (FDR) হিসাব</h3>
-    <div class="table-container">
-      <table>
-        <tr>
-          <th>এফডিআর নম্বর</th>
-          <th>মূল টাকা</th>
-          <th>মুনাফার হার</th>
-        </tr>
-        <tr>
-          <td>FDR-501</td>
-          <td>৳ ১,০০,০০০</td>
-          <td>৯.৫%</td>
-        </tr>
-      </table>
-    </div>
-  </div>
-
-  <!-- বিকাশ পেমেন্ট -->
-  <div class="container" id="bkash">
-    <h2>সঞ্চয় / কিস্তি জমা দিন (বিকাশ)</h2>
-    <div class="bkash-box">
-      <p style="margin:0;"><strong>বিকাশ পার্সোনাল নম্বর:</strong> 01811699188 (Send Money করুন)</p>
-    </div>
-    
-    <form>
-      <label for="member-id">সদস্য আইডি:</label>
-      <input type="text" id="member-id" placeholder="উদাহরণ: M-001" required>
-
-      <label for="payment-type">জমার ধরন:</label>
-      <select id="payment-type">
-        <option value="saving">সাধারণ সঞ্চয়</option>
-        <option value="dps">ডিপিএস কিস্তি</option>
-        <option value="loan">ঋণের কিস্তি</option>
-        <option value="fdr">এফডিআর জমা</option>
+    <div class="form-group">
+      <label for="account_type">জমার খাত (Account Type)</label>
+      <select id="account_type" name="account_type" required>
+        <option value="">খাত নির্বাচন করুন</option>
+        <option value="savings">সাধারণ সঞ্চয়</option>
+        <option value="dps">ডিপিএস (DPS)</option>
+        <option value="fdr">এফডিআর (FDR)</option>
       </select>
+    </div>
 
-      <label for="amount">টাকার পরিমাণ (টাকা):</label>
-      <input type="number" id="amount" placeholder="কত টাকা পাঠিয়েছেন?" required>
+    <div class="form-group">
+      <label for="amount">টাকার পরিমাণ (Amount)</label>
+      <input type="number" id="amount" name="amount" placeholder="৳ ০.০০" required>
+    </div>
 
-      <label for="bkash-num">যে বিকাশ নম্বর থেকে পাঠিয়েছেন:</label>
-      <input type="text" id="bkash-num" placeholder="017XXXXXXXX" required>
+    <div class="form-group">
+      <label for="bkash_number">যে নম্বর থেকে টাকা পাঠিয়েছেন</label>
+      <input type="tel" id="bkash_number" name="bkash_number" placeholder="017XXXXXXXX" required>
+    </div>
 
-      <label for="trxid">বিকাশ TrxID:</label>
-      <input type="text" id="trxid" placeholder="উদাহরণ: 8N7A6D5E" required>
+    <div class="form-group">
+      <label for="trx_id">বিকাশ Transaction ID (TrxID)</label>
+      <input type="text" id="trx_id" name="trx_id" placeholder="যেমন: 9J76A4KL9X" required>
+    </div>
 
-      <button type="submit" class="btn bkash-btn">পেমেন্ট তথ্য জমা দিন</button>
-    </form>
-  </div>
-
-  <script>
-    function toggleMenu() {
-      var nav = document.getElementById("nav-links");
-      nav.classList.toggle("active");
-    }
-
-    function handleLogin(event) {
-      event.preventDefault();
-      var id = document.getElementById("login-id").value;
-      var pass = document.getElementById("login-pass").value;
-
-      if(id !== "" && pass !== "") {
-        alert("লগইন সফল হয়েছে!");
-        document.getElementById("private-accounts").style.display = "block";
-        window.location.href = "#private-accounts";
-      }
-    }
-  </script>
+    <button type="submit" class="btn-submit">পেমেন্ট তথ্য জমা দিন</button>
+  </form>
+</div>
 
 </body>
 </html>
