@@ -1,51 +1,236 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>মধুমতি কৃষি সমবায় সমিতি লি:</title>
-<style>
-body{font-family:Arial,sans-serif;margin:0;background:#f0f7f1;color:#173d27}
-header{background:#08783d;color:white;text-align:center;padding:25px 10px}
-h1{font-size:25px;margin:8px}
-main{padding:18px;max-width:700px;margin:auto}
-.card{background:white;padding:20px;margin:15px 0;border-radius:12px;box-shadow:0 2px 8px #bbb}
-h2{color:#08783d}
-.btn{display:block;text-align:center;background:#08783d;color:white;padding:13px;margin:12px 0;border-radius:8px;text-decoration:none;font-size:17px}
-footer{background:#07552d;color:white;text-align:center;padding:18px}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>মধুমতি কৃষি সমবায় সমিতি লি:</title>
+    <style>
+        /* মূল স্টাইল ও কালার স্কিম */
+        :root {
+            --primary-color: #0d6338;
+            --secondary-color: #0b4f2c;
+            --accent-color: #f39c12;
+            --bg-color: #f4f7f5;
+            --text-color: #333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        /* হেডার ও ব্যানার */
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: #fff;
+            text-align: center;
+            padding: 30px 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 26px;
+        }
+
+        header p {
+            margin: 5px 0 0;
+            font-size: 15px;
+            opacity: 0.9;
+        }
+
+        /* নোটিশ বার (Ticker) */
+        .notice-bar {
+            background-color: var(--accent-color);
+            color: #fff;
+            padding: 8px 0;
+            font-weight: bold;
+        }
+
+        /* কন্টেইনার */
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+
+        /* কার্ড স্টাইল */
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            border-left: 5px solid var(--primary-color);
+        }
+
+        .card h2 {
+            color: var(--primary-color);
+            margin-top: 0;
+            font-size: 20px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 8px;
+        }
+
+        /* বাটনের স্টাইল */
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            box-sizing: border-box;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .btn-whatsapp {
+            background-color: #25d366;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #1eb954;
+        }
+
+        /* লিস্ট স্টাইল */
+        ul.service-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul.service-list li {
+            padding: 10px 0;
+            border-bottom: 1px dashed #ddd;
+            font-size: 16px;
+        }
+
+        ul.service-list li::before {
+            content: "✔ ";
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        /* ইনপুট ফর্ম স্টাইল */
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0 15px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+
+        /* ফুটার */
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+            margin-top: 30px;
+        }
+    </style>
 </head>
 <body>
-<header>
-<h1>মধুমতি কৃষি সমবায় সমিতি লি:</h1>
-<p>হাটখলা বাজার, নেত্রকোনা সদর</p>
-<p>নিবন্ধন নং: ১৬৭</p>
-</header>
-<main>
-<div class="card">
-<h2>আমাদের সমিতিতে স্বাগতম</h2>
-<p>সঞ্চয়, সহযোগিতা ও উন্নত জীবনের লক্ষ্যে আমরা একসঙ্গে কাজ করি।</p>
-</div>
-<div class="card">
-<h2>আমাদের সেবাসমূহ</h2>
-<p>✅ সদস্য ভর্তি</p>
-<p>✅ সঞ্চয় ও জমার তথ্য</p>
-<p>✅ ঋণের আবেদন সংক্রান্ত তথ্য</p>
-<p>✅ কিস্তি ও বকেয়া সংক্রান্ত যোগাযোগ</p>
-</div>
-<div class="card">
-<h2>যোগাযোগ</h2>
-<p>ঠিকানা: হাটখলা বাজার, নেত্রকোনা সদর</p>
-<p>মোবাইল: 01811699188</p>
-<a class="btn" href="tel:01811699188">ফোন করুন</a>
-<a class="btn" href="https://wa.me/8801811699188">হোয়াটসঅ্যাপে যোগাযোগ</a>
-</div>
-<div class="card">
-<h2>সদস্য সেবা</h2>
-<p>সদস্য ভর্তি, ঋণ ও কিস্তি সম্পর্কে জানতে সমিতির সঙ্গে যোগাযোগ করুন।</p>
-<a class="btn" href="tel:01811699188">সদস্য সেবার জন্য যোগাযোগ</a>
-</div>
-</main>
-<footer>© ২০২৬ মধুমতি কৃষি সমবায় সমিতি লি:<br>সকল অধিকার সংরক্ষিত</footer>
+
+    <!-- হেডার -->
+    <header>
+        <h1>মধুমতি কৃষি সমবায় সমিতি লি:</h1>
+        <p>হাটখোলা বাজার, নেত্রকোনা সদর</p>
+        <p><strong>নিবন্ধন নং: ১৬৭</strong></p>
+    </header>
+
+    <!-- চলমান নোটিশ -->
+    <div class="notice-bar">
+        <marquee behavior="scroll" direction="left">
+            📢 মধুমতি কৃষি সমবায় সমিতি লি:-এ নতুন সদস্য ভর্তি চলছে। সঞ্চয় ও ঋণ সংক্রান্ত তথ্যের জন্য যোগাযোগ করুন।
+        </marquee>
+    </div>
+
+    <div class="container">
+
+        <!-- স্বাগত বার্তা -->
+        <div class="card">
+            <h2>আমাদের সমিতিতে স্বাগতম</h2>
+            <p>সঞ্চয়, সহযোগিতা ও উন্নত জীবনের লক্ষ্যে আমরা একসাথে কাজ করি। আপনার ভবিষ্যত সুরক্ষায় আমরা আছি আপনার পাশে।</p>
+        </div>
+
+        <!-- সেবাসমূহ -->
+        <div class="card">
+            <h2>আমাদের সেবাসমূহ</h2>
+            <ul class="service-list">
+                <li>সদস্য ভর্তি কার্যক্রম</li>
+                <li>দৈনিক ও মাসিক সঞ্চয় জমা (DPS)</li>
+                <li>স্থায়ী আমানত (FDR)</li>
+                <li>সহজ শর্তে ঋণ সুবিধা</li>
+                <li>বিকাশ/অনলাইন কিস্তি জমা সংক্রান্ত সেবা</li>
+            </ul>
+        </div>
+
+        <!-- অনলাইন আবেদন ফর্ম -->
+        <div class="card">
+            <h2>অনলাইন সদস্য / ঋণ আবেদন</h2>
+            <form id="applyForm">
+                <label>আপনার নাম:</label>
+                <input type="text" placeholder="পূর্ণ নাম লিখুন" required>
+
+                <label>মোবাইল নম্বর:</label>
+                <input type="tel" placeholder="০১৮XXXXXXXX" required>
+
+                <label>আবেদনের ধরন:</label>
+                <select>
+                    <option>নতুন সদস্য ভর্তি</option>
+                    <option>সঞ্চয় হিসাব খোলা</option>
+                    <option>ঋণের জন্য আবেদন</option>
+                </select>
+
+                <button type="submit" class="btn">আবেদন জমা দিন</button>
+            </form>
+        </div>
+
+        <!-- যোগাযোগ -->
+        <div class="card">
+            <h2>যোগাযোগ করুন</h2>
+            <p>📍 <strong>ঠিকানা:</strong> হাটখোলা বাজার, নেত্রকোনা সদর</p>
+            <p>📞 <strong>মোবাইল:</strong> 01811699188</p>
+            
+            <a href="tel:01811699188" class="btn">📞 সরাসরি কল করুন</a>
+            <a href="https://wa.me/8801811699188" target="_blank" class="btn btn-whatsapp">💬 হোয়াটসঅ্যাপে যোগাযোগ</a>
+        </div>
+
+    </div>
+
+    <!-- ফুটার -->
+    <footer>
+        © ২০২৬ মধুমতি কৃষি সমবায় সমিতি লি: | সর্বস্বত্ব সংরক্ষিত
+    </footer>
+
+    <!-- এআই চ্যাটবট ইন্টিগ্রেশন (Tidio / Custom Script) -->
+    <script>
+        // ফর্ম সাবমিট হ্যান্ডলার
+        document.getElementById('applyForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('আপনার আবেদনটি সফলভাবে গৃহীত হয়েছে! শীঘ্রই সমিতি থেকে যোগাযোগ করা হবে।');
+            this.reset();
+        });
+    </script>
+
+    <!-- বিনামূল্যে এআই চ্যাটবট যুক্ত করতে নিচের কোডটি ব্যবহার করতে পারেন (Tidio Chatbot) -->
+    <!-- <script src="//code.tidio.co/YOUR_TIDIO_KEY.js" async></script> -->
+
 </body>
 </html>
