@@ -1,125 +1,51 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>বিকাশ ম্যানুয়াল পেমেন্ট</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f6f9;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      margin: 0;
-    }
-    .payment-card {
-      background: #ffffff;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      max-width: 400px;
-      width: 100%;
-    }
-    .bkash-header {
-      background-color: #e2136e;
-      color: white;
-      padding: 15px;
-      text-align: center;
-      border-radius: 8px;
-      font-size: 18px;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-    .instructions {
-      background-color: #fff0f5;
-      border-left: 4px solid #e2136e;
-      padding: 10px 12px;
-      font-size: 13px;
-      color: #333;
-      margin-bottom: 20px;
-      line-height: 1.5;
-    }
-    .form-group {
-      margin-bottom: 15px;
-    }
-    .form-group label {
-      display: block;
-      font-size: 14px;
-      font-weight: bold;
-      margin-bottom: 5px;
-      color: #444;
-    }
-    .form-group input, .form-group select {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      box-sizing: border-box;
-      font-size: 14px;
-    }
-    .btn-submit {
-      width: 100%;
-      background-color: #e2136e;
-      color: white;
-      border: none;
-      padding: 12px;
-      border-radius: 6px;
-      font-size: 16px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    .btn-submit:hover {
-      background-color: #c10d5d;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>মধুমতি কৃষি সমবায় সমিতি লি:</title>
+<style>
+body{font-family:Arial,sans-serif;margin:0;background:#f0f7f1;color:#173d27}
+header{background:#08783d;color:white;text-align:center;padding:25px 10px}
+h1{font-size:25px;margin:8px}
+main{padding:18px;max-width:700px;margin:auto}
+.card{background:white;padding:20px;margin:15px 0;border-radius:12px;box-shadow:0 2px 8px #bbb}
+h2{color:#08783d}
+.btn{display:block;text-align:center;background:#08783d;color:white;padding:13px;margin:12px 0;border-radius:8px;text-decoration:none;font-size:17px}
+footer{background:#07552d;color:white;text-align:center;padding:18px}
+</style>
 </head>
 <body>
-
-<div class="payment-card">
-  <div class="bkash-header">
-    বিকাশ ম্যানুয়াল পেমেন্ট
-  </div>
-
-  <div class="instructions">
-    <b>নির্দেশনা:</b> আমাদের বিকাশ পার্সোনাল নম্বর <b>01700000000</b>-এ "Send Money" করুন। টাকা পাঠানোর পর নিচের ফর্মে বিবরণ দিয়ে জমা দিন।
-  </div>
-
-  <form action="#" method="POST">
-    <div class="form-group">
-      <label for="member_id">সদস্য আইডি (Member ID)</label>
-      <input type="text" id="member_id" name="member_id" placeholder="যেমন: M-1024" required>
-    </div>
-
-    <div class="form-group">
-      <label for="account_type">জমার খাত (Account Type)</label>
-      <select id="account_type" name="account_type" required>
-        <option value="">খাত নির্বাচন করুন</option>
-        <option value="savings">সাধারণ সঞ্চয়</option>
-        <option value="dps">ডিপিএস (DPS)</option>
-        <option value="fdr">এফডিআর (FDR)</option>
-      </select>
-    </div>
-
-    <div class="form-group">
-      <label for="amount">টাকার পরিমাণ (Amount)</label>
-      <input type="number" id="amount" name="amount" placeholder="৳ ০.০০" required>
-    </div>
-
-    <div class="form-group">
-      <label for="bkash_number">যে নম্বর থেকে টাকা পাঠিয়েছেন</label>
-      <input type="tel" id="bkash_number" name="bkash_number" placeholder="017XXXXXXXX" required>
-    </div>
-
-    <div class="form-group">
-      <label for="trx_id">বিকাশ Transaction ID (TrxID)</label>
-      <input type="text" id="trx_id" name="trx_id" placeholder="যেমন: 9J76A4KL9X" required>
-    </div>
-
-    <button type="submit" class="btn-submit">পেমেন্ট তথ্য জমা দিন</button>
-  </form>
+<header>
+<h1>মধুমতি কৃষি সমবায় সমিতি লি:</h1>
+<p>হাটখলা বাজার, নেত্রকোনা সদর</p>
+<p>নিবন্ধন নং: ১৬৭</p>
+</header>
+<main>
+<div class="card">
+<h2>আমাদের সমিতিতে স্বাগতম</h2>
+<p>সঞ্চয়, সহযোগিতা ও উন্নত জীবনের লক্ষ্যে আমরা একসঙ্গে কাজ করি।</p>
 </div>
-
+<div class="card">
+<h2>আমাদের সেবাসমূহ</h2>
+<p>✅ সদস্য ভর্তি</p>
+<p>✅ সঞ্চয় ও জমার তথ্য</p>
+<p>✅ ঋণের আবেদন সংক্রান্ত তথ্য</p>
+<p>✅ কিস্তি ও বকেয়া সংক্রান্ত যোগাযোগ</p>
+</div>
+<div class="card">
+<h2>যোগাযোগ</h2>
+<p>ঠিকানা: হাটখলা বাজার, নেত্রকোনা সদর</p>
+<p>মোবাইল: 01811699188</p>
+<a class="btn" href="tel:01811699188">ফোন করুন</a>
+<a class="btn" href="https://wa.me/8801811699188">হোয়াটসঅ্যাপে যোগাযোগ</a>
+</div>
+<div class="card">
+<h2>সদস্য সেবা</h2>
+<p>সদস্য ভর্তি, ঋণ ও কিস্তি সম্পর্কে জানতে সমিতির সঙ্গে যোগাযোগ করুন।</p>
+<a class="btn" href="tel:01811699188">সদস্য সেবার জন্য যোগাযোগ</a>
+</div>
+</main>
+<footer>© ২০২৬ মধুমতি কৃষি সমবায় সমিতি লি:<br>সকল অধিকার সংরক্ষিত</footer>
 </body>
 </html>
